@@ -13,7 +13,7 @@ var ipaddress, port;
 
 var setupVariables = function() {
 	ipaddress = serverConfig.ip;
-	port = serverConfig.port;
+	port = process.env.PORT || serverConfig.port;
 };
 
 var terminator = function(sig) {
